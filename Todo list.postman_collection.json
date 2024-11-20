@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "c48c9d7e-e9aa-403d-a50e-55f6435d158a",
+		"name": "Todo list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17962999"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"yourPassword123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/auth/signup \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"yourPassword123\"\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"yourPassword123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/auth/login \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"yourPassword123\"\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "createTodo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_jwt_token>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Buy Groceries\",\r\n    \"description\": \"Milk, Eggs, Bread\",\r\n    \"dueDate\": \"2024-12-01T10:00:00Z\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todos"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/todos \\\r\n  -H \"Authorization: Bearer <your_jwt_token>\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"title\": \"Buy Groceries\",\r\n    \"description\": \"Milk, Eggs, Bread\",\r\n    \"dueDate\": \"2024-12-01T10:00:00Z\"\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getTodoList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_jwt_token>"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:5000/api/todos \\\r\n  -H \"Authorization: Bearer <your_jwt_token>\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getTodoById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_jwt_token>"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:5000/api/todos \\\r\n  -H \"Authorization: Bearer <your_jwt_token>\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTodo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_jwt_token>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Buy Groceries - Updated\",\r\n    \"description\": \"Milk, Eggs, Bread, Butter\",\r\n    \"dueDate\": \"2024-12-02T10:00:00Z\",\r\n    \"completed\": true\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todos/<todo_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todos",
+						"<todo_id>"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT http://localhost:5000/api/todos/<todo_id> \\\r\n  -H \"Authorization: Bearer <your_jwt_token>\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"title\": \"Buy Groceries - Updated\",\r\n    \"description\": \"Milk, Eggs, Bread, Butter\",\r\n    \"dueDate\": \"2024-12-02T10:00:00Z\",\r\n    \"completed\": true\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/todos/<todo_id>",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_jwt_token>"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todos/<todo_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todos",
+						"<todo_id>"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:5000/api/todos/<todo_id> \\\r\n  -H \"Authorization: Bearer <your_jwt_token>\"\r\n"
+			},
+			"response": []
+		}
+	]
+}
