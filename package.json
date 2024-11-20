@@ -4,6 +4,7 @@
   "description": "This repository for to-do list API ",
   "main": "app.js",
   "scripts": {
+    "start": "ts-node-dev app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nency Rana",
