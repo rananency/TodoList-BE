@@ -19,22 +19,22 @@ A simple REST API for managing todo items with user authentication, built using 
 
 3. Create a .env file in the root directory and add the following
     
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_secret_key
-    PORT=5000   
+    - MONGO_URI=your_mongodb_connection_string
+    - JWT_SECRET=your_secret_key
+    - PORT=5000   
 
 4. Start the server in development mode:
 
     npm start
 
 ## API Endpoints
-POST /api/auth/signup - Register a new user
-POST /api/auth/login - Login and receive a token
-POST /api/todos - Create a todo (Requires token)
-GET /api/todos - Fetch all todos (Requires token)
-GET /api/todos/:id - Fetch a specific todo (Requires token)
-PUT /api/todos/:id - Update a todo (Requires token)
-DELETE /api/todos/:id - Delete a todo (Requires token)
+1. POST /api/auth/signup - Register a new user
+2. POST /api/auth/login - Login and receive a token
+3. POST /api/todos - Create a todo (Requires token)
+4. GET /api/todos - Fetch all todos (Requires token)
+5. GET /api/todos/:id - Fetch a specific todo (Requires token)
+6. PUT /api/todos/:id - Update a todo (Requires token)
+7. DELETE /api/todos/:id - Delete a todo (Requires token)
 
 ## CRON Job
 The CRON job runs daily at midnight to automatically mark todos with expired due dates as completed.
